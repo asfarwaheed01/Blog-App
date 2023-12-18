@@ -12,21 +12,21 @@ git clone https://github.com/asfarwaheed01/Blog-App.git
 cd mern-blog-app
 
 2- Setup Client:
-cd client
+cd client and run
 yarn install
 
 3- Setup api:
-cd api
+cd api and run 
 yarn install
 
 4- Setup DB:
 Create a Date base in MongoDB and use Your Own Password and Username
 
 5- Start the Development Servers:
-cd clinet
+cd clinet and run
 yarn start
 
-cd api
+cd api and run
 nodemon index.js
 
 6- Open in Browser:
