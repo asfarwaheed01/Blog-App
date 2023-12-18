@@ -9,6 +9,7 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const fs = require("fs");
+require("dotenv").config();
 const salt = bcrypt.genSaltSync(10);
 const port = 4000;
 const secret = "asdfsdgadfad";
@@ -28,7 +29,7 @@ app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
 mongoose.connect(
-  "mongodb+srv://asfarwaheed:5ghb1FnAJPASqV8c@cluster0.ndg28er.mongodb.net/?retryWrites=true&w=majority"
+  `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ndg28er.mongodb.net/?retryWrites=true&w=majority`
 );
 
 app.post("/register", async (req, res) => {
